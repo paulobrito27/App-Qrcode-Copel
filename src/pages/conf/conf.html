@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ConfPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color=primary>
+    <ion-title>configuração</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <ion-list>
+    <button ion-item *ngFor="let item of usuario" >
+      <h2>COLABORADOR: </h2>
+      <h2>{{ item.usuario }}</h2>
+      <h2>REGISTRO: </h2>
+      <h2>{{ item.registro }}</h2>
+      <h2>EMAIL: </h2>
+      <p>{{ item.email }}</p>
+    </button>
+  </ion-list>
+  <button ion-button block (click)="configura()">Altera dados</button>
+
+
+</ion-content>

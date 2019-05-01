@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color=primary>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Inventário
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="opcoes2()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>depósito : {{deposito}}</h2>
+  
+  
+  <ion-list>
+    <button ion-item *ngFor="let item of lista2">
+      <h2>{{ item.prateleira }}</h2>
+      <h2>{{ item.codigo }} </h2>
+      <p>{{ item.nome }}</p>
+      <ion-badge item-end>{{ item.quantidade }}</ion-badge>
+      <ion-icon item-end name="sync" (click)="apaga(item)"></ion-icon>
+      <ion-badge item-end>{{ item.qtd_contada }}</ion-badge>
+      <ion-icon item-end name="barcode" (click)="lerQr2(item)"></ion-icon>
+    </button>
+  </ion-list>
+  
+
+  
+
+</ion-content>
